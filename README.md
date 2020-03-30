@@ -1,8 +1,8 @@
 
 # Create CI/CD Pipeline with Jenkins and Deploy Containerized Application on Google Kubernetes Cluster
 
-Using Docker technology to containerize the application, using GKE to deploy the containerized application and establish a CI/CD pipeline and GitHub as a source code repository with build automation tool Jenkins, and integrate the CI/CD pipeline with the Kubernetes platform.
-My s3 homepage: [http://swe645-yhan27.s3-website-us-east-1.amazonaws.com/](http://swe645-yhan27.s3-website-us-east-1.amazonaws.com/)
+Using Docker technology to containerize the application, using GKE to deploy the containerized application and establish a CI/CD pipeline and GitHub as a source code repository with build automation tool Jenkins, and integrate the CI/CD pipeline with the Kubernetes platform. <br/>
+My s3 homepage: [http://swe645-yhan27.s3-website-us-east-1.amazonaws.com/](http://swe645-yhan27.s3-website-us-east-1.amazonaws.com/)<br/>
 Deployed application: [http://35.245.1.164/swe645hw2/studentSurveyForm.html](http://35.245.1.164/swe645hw2/studentSurveyForm.html)
 
 
