@@ -1,3 +1,11 @@
+/*A Jenkinsfile, which is checked into source control [1], provides a number of immediate benefits:
+
+Code review/iteration on the Pipeline
+
+Audit trail for the Pipeline
+
+Single source of truth for the Pipeline, which can be viewed and edited by multiple members of the project.*/
+
 pipeline {
     agent any
     environment {
