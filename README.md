@@ -149,9 +149,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## References
 
-* [https://docs.bitnami.com/tutorials/create-ci-cd-pipeline-jenkins-gke/#step-4-create-a-jenkins-pipeline-project](https://docs.bitnami.com/tutorials/create-ci-cd-pipeline-jenkins-gke/#step-4-create-a-jenkins-pipeline-project)
-* [https://cloud.google.com/run/docs/deploying](https://cloud.google.com/run/docs/deploying)
-* [https://www.youtube.com/watch?v=l7ngjJ_RVXs](https://www.youtube.com/watch?v=l7ngjJ_RVXs)
+* Tutorials on Github, CI/CD pipeline, Jenkins and GKE[https://docs.bitnami.com/tutorials/create-ci-cd-pipeline-jenkins-gke/#step-4-create-a-jenkins-pipeline-project](https://docs.bitnami.com/tutorials/create-ci-cd-pipeline-jenkins-gke/#step-4-create-a-jenkins-pipeline-project)
+* Deployt container on GKE [https://cloud.google.com/run/docs/deploying](https://cloud.google.com/run/docs/deploying)
+* Install Jenkins on GCP Virtual Machine [https://www.youtube.com/watch?v=l7ngjJ_RVXs](https://www.youtube.com/watch?v=l7ngjJ_RVXs)
 * Kubectl Reference Docs [https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
 
 
