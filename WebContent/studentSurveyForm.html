@@ -1,0 +1,147 @@
+<!-- Yu Han -->
+<!-- This is the HTML file that constructs the format of the student survey form -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="studentSurveyForm.css">
+<title>STUDENT SURVEY FORM</title>
+</head>
+<body class="body">
+<h1 class="surveyHeading">Student Survey Form</h1>
+<hr>
+<form class="surveyForm" method="post" action="studentSurveyFormServlet">
+
+  <div>
+    <label class="options"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="firstName" required>
+  </div>
+  
+  <div>
+    <label class="options"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="lastName" required>
+  </div>
+  
+  <div>
+    <label class="options"><b>Street Address</b></label>
+    <input type="text" placeholder="Enter Street Address" name="streetAddress" required>
+  </div>
+   
+   <div>
+    <label class="options"><b>City</b></label>
+    <input type="text" placeholder="Enter City" name="city" required>
+   </div>
+    
+   <div>
+    <label class="options"><b>State</b></label>
+    <input type="text" placeholder="Enter State" name="state" required>
+   </div>
+   
+   <div>
+    <label class="options"><b>Zip Code</b></label>
+    <input type="number" placeholder="Enter Zip Code" name="zipCode" required>
+  </div>
+  
+  <div>
+    <label class="options"><b>Telephone Number</b></label>
+    <input type="number" placeholder="Enter Telephone Number" name="telephoneNumber" maxlength="10" required>
+  </div>
+  
+  <div>
+    <label class="options"><b>E-mail</b></label>
+    <input type="email" placeholder="Enter E-mail" name="email" required>
+    
+  </div>
+  
+  <div>
+    <label class="options"><b>Date Of Survey</b></label>
+    <input type="date" name="dateOfSurvey" required>
+  </div>
+  <hr>
+  
+  <div>
+    <label class="questionHeading"><b>Indicate what you liked most about the campus?</b></label>
+  </div>
+  
+  <div class="formInputs">
+  	<label class="options">Students</label>
+    <input type="checkbox" name="option1" value="students">
+    
+    <label class="options">Location</label>
+    <input type="checkbox" name="option2" value="location">
+    
+    <label class="options">Campus</label>
+    <input type="checkbox" name="option3" value="campus">
+    
+    <label class="options">Atmosphere</label>
+    <input type="checkbox" name="option4" value="atmosphere">
+    
+    <label class="options">Dorm Rooms</label>
+    <input type="checkbox" name="option5" value="dormRooms">
+    
+    <label class="options">Sports</label>
+    <input type="checkbox" name="option6" value="sports">
+    
+  </div>
+  <hr>
+  
+  <div>
+    <label class="questionHeading"><b>Indicate how you became interested in the university?</b></label>
+  </div>
+  
+  <div class="formInputs">
+  	<label class="options">Friends</label>
+    <input type="radio" name="option1" value="friends">
+    
+    <label class="options">Television</label>
+    <input type="radio" name="option1" value="television">
+    
+    <label class="options">Internet</label>
+    <input type="radio" name="option1" value="internet">
+    
+    <label class="options">Other</label>
+    <input type="radio" name="option1" value="other">
+    
+  </div>
+  <hr>
+  
+  <div>
+    <label class="questionHeading"><b>Select the likelihood of your recommending this school to other prospective students.</b></label>
+  </div>
+  
+  <div class="formInputs">
+    <select id = "likelihood">
+        <option value = "Very Likely">Very Likely</option>
+        <option value = "Likely">Likely</option>
+        <option value = "Unlikely">Unlikely</option>
+    </select>
+  </div>
+  <hr>
+  
+  <div>
+    <label class="questionHeading"><b>Enter at least ten comma separated numbers ranging from 1 through 100. Winner gets a FREE MOVIE TICKET!</b></label>
+  </div>
+  <div>
+    <label class="options">Raffle</label>
+    <input type="text" name="raffle" class="raffleInput" pattern="((\d+,){9}\d+)">
+  </div>
+  <hr>
+  
+  <div>
+    <label class="questionHeading">Please enter additional comments.</label>
+  </div>
+    
+  <div>
+    <textarea rows = "6" cols = "120" name = "comments"></textarea>
+  </div>
+  
+  <div>
+    <button type="submit" value="Submit">Submit</button>
+  	<button type="reset" value="Reset">Cancel</button>
+  </div> 
+
+</form>
+</body>
+
+</html>
