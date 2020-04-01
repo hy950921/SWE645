@@ -83,6 +83,10 @@ Go to Compute Engine -> VM instances, connect to the Jenkins server using SSH "o
 		```sudo apt-get update 
 		sudo apt-get install kubectl```
 
+* username: admin
+* passowrd can be fetched by:
+	``` sudo cat /var/lib/jenkins/secrets/initialAdminPassword ```
+
 Install suggested plugins and Google Kubernetes Engine plugin
 
 ### Configure a Google Cloud Platform service account
@@ -113,7 +117,7 @@ Navigate to the "IAM & admin -> Service accounts" page. Create a new JSON key fo
 - Click the "Add credentials" link. Select the "Username with password" credential type and enter your Docker Hub username and password in the corresponding fields. Set the "ID" field to _dockerhub_. Click "OK" to save the changes.
 - Click the "Add credentials" link. Select the "Google Service Account from private key" credential type and set the project name (which doubles as the credential identifier) to _gke_. Select the "JSON key" radio button and upload the JSON key obtained in previous step. Click "OK" to save the changes.
 
-###  Prepare the Jenkinsfile
+###  Commands of Jenkinsfile
 This file contains several steps to build image, push image and update the deployment. This is the update part.
 ```
 sh 'gcloud container clusters get-credentials swe645hw2 --zone us-east4-a'
