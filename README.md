@@ -140,6 +140,8 @@ Use the _kubectl get deployments_ and _kubectl get services_ commands to check t
 * [Kubernetes](https://kubernetes.io/)
 * [Jenkins](https://jenkins.io/)
 * [Github](https://github.com/)
+* [AWS S3](https://aws.amazon.com/s3/)
+* [Google Cloud Platform](https://cloud.google.com/)
 
 
 ## License
