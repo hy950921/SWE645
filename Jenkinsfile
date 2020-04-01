@@ -20,6 +20,13 @@ pipeline {
                 checkout scm
             }
         }
+        stage('BuildWAR') {
+            steps {
+		echo 'Creating the Jar ...'
+		sh 'java -version'
+		sh 'jar -cvf swe645hw2.war -C WebContent/ studentSurveyForm.html -C WebContent/ studentSurveyForm.css'
+            }
+        }
         stage("Build image") {
             steps {
                 script {
