@@ -74,18 +74,20 @@ Once you've determined the external IP address for your application, copy the IP
 Go to Compute Engine -> VM instances, connect to the Jenkins server using SSH "open in browser window"
 * [Install Docker](https://docs.bitnami.com/google/apps/jenkins/configuration/install-docker-debian/)
 * Add the user running Jenkins to connect to the Docker daemon by adding it to the _docker_ group:
-	```
-	 sudo usermod -aG docker $USER 
-	 sudo usermod -aG docker jenkins
-	 JenkinsURL/restart
-	 ```
+		sudo usermod -aG docker $USER 
+		sudo usermod -aG docker jenkins
+		JenkinsURL/restart
+
 * Install the _kubectl_ command-line tool:	
-		```sudo apt-get update 
-		sudo apt-get install kubectl```
+		sudo apt-get update 
+		sudo apt-get install kubectl
+
+* Install Java Runtime Environment
+		sudo apt-get install default-jre
 
 * username: admin
 * passowrd can be fetched by:
-	``` sudo cat /var/lib/jenkins/secrets/initialAdminPassword ```
+		sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 Install suggested plugins and Google Kubernetes Engine plugin
 
@@ -119,21 +121,21 @@ Navigate to the "IAM & admin -> Service accounts" page. Create a new JSON key fo
 
 ###  Commands of Jenkinsfile
 This file contains several steps to build image, push image and update the deployment. This is the update part.
-```
-sh 'gcloud container clusters get-credentials swe645hw2 --zone us-east4-a'
-sh 'kubectl config view'
-sh "kubectl get deployments"
-sh "kubectl set image deployment/survey-app swe645hw2=hy950921/swe645hw2:${env.BUILD_ID}"
-```
+
+		sh 'gcloud container clusters get-credentials swe645hw2 --zone us-east4-a'
+		sh 'kubectl config view'
+		sh "kubectl get deployments"
+		sh "kubectl set image deployment/survey-app swe645hw2=hy950921/swe645hw2:${env.BUILD_ID}"
+
 
 ### Commit, test and repeat
-```
-git init 
-git remote add origin CLONE-URL 
-git add . 
-git commit -m "Initial commit" 
-git push origin master
-```
+
+		git init 
+		git remote add origin CLONE-URL 
+		git add . 
+		git commit -m "Initial commit" 
+		git push origin master
+
 Pushing this commit should automatically trigger the pipeline in Jenkins. To see the pipeline in action, navigate to the project page in Jenkins and confirm that the pipeline is running,
 Use the _kubectl get deployments_ and _kubectl get services_ commands to check the status of your deployment on the Kubernetes cluster and obtain the load balancer IP address
 
